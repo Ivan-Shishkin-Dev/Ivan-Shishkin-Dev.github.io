@@ -130,13 +130,40 @@ p {
   transform: none;
 }
 
-#content a {
-  color: #00bfff; /* light blue */
-  text-decoration: none;
-  font-weight: 500;
+/* ------------------UNDER THIS IS ABOUT CONTACT BUTTONS------------------ */
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-#content a:hover {
-  color: #0077b5; /* darker blue (LinkedIn tone) */
-  text-decoration: underline;
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn img {
+  width: 60px;
+  height: 60px;
+  filter: brightness(0) invert(1);
+}
+
+/* Individual button colors */
+.linkedin { background-color: #0077b5; }
+.github { background-color: #333; }
+.email { background-color: #d44638; }
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
 }
