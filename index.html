@@ -38,23 +38,35 @@
   </div>
 
   <!-- Hidden templates for each panel -->
-  <template id="tpl-home" class="panel">
+    <template id="tpl-home" class="panel">
       <h1>Ivan Shishkin</h1>
       <h2>Computer Science Student @ UC Irvine</h2>
       <p>
         Aspiring computer scientist focused on building efficient and impactful systems.
         Passionate about algorithms, problem-solving, and applying technology to real-world challenges.
         Dedicated to continuous learning, disciplined work, and personal growth.
-  </template>
-
+      </p>
+    </template>
 <!--------------- EVERYTHING UNDER THIS IS ABOUT ME -------------->
 
-
-  <template id="tpl-about" class="panel">
+<template id="tpl-about" class="panel">
+  <section class="about-section">
+    <h2>About Me</h2>
+      <hr class="divider">
     <p>
-        ---work in progress---
+      I’m <strong>Ivan Shishkin</strong>, a Computer Science student at the <strong>University of California, Irvine</strong>.
+      I’m passionate about creating efficient and impactful systems through clean code, strong logic, and design thinking.
     </p>
-  </template>
+    <p>
+      My interests span <strong>software engineering</strong>, <strong>artificial intelligence</strong>, and <strong>systems design</strong>.
+      I bring high-level problem-solving while building projects that combine theory and practice.
+    </p>
+    <p>
+      Outside of programming, I’m dedicated to fitness, leadership, and continuous personal development.
+      I believe in disciplined improvement and pushing myself in every area of life.
+    </p>
+  </section>
+</template>
 
 <!--------------- EVERYTHING UNDER THIS IS ABOUT EDUCATION -------------->
 
@@ -65,6 +77,7 @@
     <h3>University of California, Irvine</h3>
     <p class="degree">B.S. Computer Science</p>
     <p class="grad-date"><em>Expected Graduation: June 2028</em></p>
+    <p class="grad-date"><em>GPA: 3.9</em></p>
 
     <hr class="divider">
 
@@ -111,9 +124,25 @@
 
 <!--------------- EVERYTHING UNDER THIS IS ABOUT SKILLS -------------->
 
-  <template id="tpl-skills" class="panel">
-    <p>--work in progress--</p>
-  </template>
+<template id="tpl-skills" class="panel">
+  <section class="skills-section">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Front-End</h3>
+        <p>HTML, CSS, JavaScript, React, Tkinter</p>
+      </div>
+      <div class="skill-category">
+        <h3>Back-End</h3>
+        <p>Python, SQL, SQLite, JavaScript</p>
+      </div>
+      <div class="skill-category">
+        <h3>Tools & Environments</h3>
+        <p>Git, GitHub, VS Code, PyCharm, Terminal</p>
+      </div>
+    </div>
+  </section>
+</template>
 
 <!--------------- EVERYTHING UNDER THIS IS ABOUT CONTACTS -------------->
   <template id="tpl-contact" class="panel">

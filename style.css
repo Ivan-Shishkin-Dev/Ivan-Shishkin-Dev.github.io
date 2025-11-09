@@ -249,3 +249,62 @@ p {
   left: 0;
   top: 0;
 }
+
+/* ------------------UNDER THIS IS ABOUT SKILLS ------------------ */
+.skills-section {
+  color: #f5f5f5;
+  font-family: 'Inter', 'Arial', sans-serif;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.skills-section h2 {
+  font-size: 3em;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+  border-bottom: 6px solid #F1F1F1;
+  display: inline-block;
+  padding-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.skill-category {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);   /* darker translucent background */
+  border: 2px solid #ffffff;         /* white border */
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);  /* slightly lighter on hover */
+}
+
+.skill-category h3 {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #ffffff;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.skill-category p {
+  color: #f0f0f0;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
