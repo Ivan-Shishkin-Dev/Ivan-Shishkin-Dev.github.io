@@ -167,3 +167,85 @@ p {
   transform: translateY(-2px);
   filter: brightness(1.1);
 }
+
+/* ------------------UNDER THIS IS ABOUT EDUCATION ------------------ */
+.education-section {
+  color: #f5f5f5;
+  font-family: 'Inter', 'Arial', sans-serif;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.education-section h2 {
+  font-size: 3.0em;
+  text-align: center;
+  color: #f5f5f5; /* bold blue accent */
+  margin-bottom: 10px;
+  border-bottom: 6px solid #F1F1F1; /* sleek divider */
+  padding-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.education-section h3 {
+  color: #f5f5f5;
+  margin-top: 25px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.education-section .degree {
+  font-weight: bold;
+  color: #ffffff;
+  margin: 4px 0;
+}
+
+.education-section .grad-date {
+  color: #b0b0b0;
+  font-size: 0.95em;
+}
+
+.divider {
+  border: none;
+  border-bottom: 6px solid #F1F1F1; /* sleek divider */
+  margin: 25px 0;
+}
+
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.course-tags span {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 6px 14px;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.activities {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.activities li {
+  margin-bottom: 8px;
+  color: #f5f5f5;
+  padding-left: 16px;
+  position: relative;
+}
+
+.activities li::before {
+  content: "•";
+  color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
