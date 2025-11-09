@@ -1,34 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ivan Shishkin's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Background video -->
   <video autoplay loop muted playsinline>
-    <source src="photo_video/city_landscape.mp4" type="video/mp4">
+    <source src="photo_video/city_landscape.mp4" type="video/mp4" />
   </video>
 
+  <!-- Left sidebar buttons (tabs) -->
   <div class="button-container">
-      <button onclick="window.location.href='about.html'">About Me</button>
-      <button onclick="window.location.href='education.html'">Education</button>
-      <button onclick="window.location.href='experience.html'">Experience</button>
-      <button onclick="window.location.href='projects.html'">Projects</button>
-      <button onclick="window.location.href='skills.html'">Skills</button>
-      <button onclick="window.location.href='contact.html'">Contact</button>
+    <button data-panel="home">Home</button>
+    <button data-panel="about">About</button>
+    <button data-panel="education">Education</button>
+    <button data-panel="experience">Experience</button>
+    <button data-panel="projects">Projects</button>
+    <button data-panel="skills">Skills</button>
+    <button data-panel="contact">Contact</button>
   </div>
 
-  <h1>Ivan Shishkin</h1>
-  <h2>Computer Science Student @ UC Irvine</h2>
-  <p>
-      Aspiring software engineer focused on building efficient and impactful systems.
-      Passionate about algorithms, problem-solving, and applying technology to real-world challenges.
-      Dedicated to continuous learning, disciplined work, and personal growth.
-  </p>
+  <!-- Center content -->
+  <div class="main-content">
+    <h1>Ivan Shishkin</h1>
+    <h2>Computer Science Student @ UC Irvine</h2>
+
+    <!-- Swappable panel content -->
+    <div id="content">
+      <p>
+        Aspiring software engineer focused on building efficient and impactful systems.
+        Passionate about algorithms, problem-solving, and applying technology to real-world challenges.
+        Dedicated to continuous learning, disciplined work, and personal growth.
+      </p>
+    </div>
+  </div>
+
+  <!-- Hidden templates for each panel -->
+  <template id="tpl-home" class="panel">
+    <p>Welcome. Clean code, real results, no fluff.</p>
+  </template>
+
+  <template id="tpl-about" class="panel">
+    <p>I’m Ivan — CS @ UCI (’28). Systems, algorithms, and building useful things.</p>
+  </template>
+
+  <template id="tpl-education" class="panel">
+    <p>UC Irvine — B.S. Computer Science. Core: data structures, systems, networks.</p>
+  </template>
+
+  <template id="tpl-experience" class="panel">
+    <p>Highlights: client/server messaging app, SQL-backed engines, small games.</p>
+  </template>
+
+  <template id="tpl-projects" class="panel">
+    <p>Projects: 2048, Sokoban, Dr. Mario clone, DM app (Tkinter), SQLite app engine.</p>
+  </template>
+
+  <template id="tpl-skills" class="panel">
+    <p>Skills: Python, JS, HTML/CSS, SQL. Strengths: debugging, problem solving, persistence.</p>
+  </template>
+
+  <template id="tpl-contact" class="panel">
+    <p>Contact: add your email / LinkedIn / GitHub here with real links.</p>
+  </template>
 
   <script src="script.js"></script>
 </body>
 </html>
-

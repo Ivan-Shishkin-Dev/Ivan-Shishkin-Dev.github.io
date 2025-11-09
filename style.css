@@ -96,3 +96,36 @@ p {
   text-align: center;
   max-width: 800px;
 }
+
+/* Content animations */
+#content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  animation-duration: 280ms;
+  animation-fill-mode: both;
+}
+
+.fade-out {
+  animation-name: fadeOutUp;
+}
+.fade-in {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeOutUp {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-14px); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional: active button style */
+.button-container button.active {
+  background: rgba(255,255,255,0.28);
+  transform: none;
+}
