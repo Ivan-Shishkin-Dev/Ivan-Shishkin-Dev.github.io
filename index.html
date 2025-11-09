@@ -4,72 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ivan Shishkin's Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      overflow: hidden;
-    }
-
-    video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    h1, p {
-      position: relative;
-      z-index: 2;
-    }
-
-    h1 {
-      font-size: 5rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-        position: relative;
-        z-index: 2;
-        font-size: 1.8rem;
-        font-weight: 400;
-        color: #cccccc;
-        margin-bottom: 1.0rem;
-    }
-
-    p {
-      font-size: 1.25rem;
-      max-width: 750px;
-      line-height: 1.6;
-      color: #e0e0e0;
-      padding: 0 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <video autoplay loop muted playsinline>
     <source src="photo_video/city_landscape.mp4" type="video/mp4">
   </video>
+
+  <div class="button-container">
+      <button onclick="window.location.href='about.html'">About Me</button>
+      <button onclick="window.location.href='education.html'">Education</button>
+      <button onclick="window.location.href='experience.html'">Experience</button>
+      <button onclick="window.location.href='projects.html'">Projects</button>
+      <button onclick="window.location.href='skills.html'">Skills</button>
+      <button onclick="window.location.href='contact.html'">Contact</button>
+  </div>
 
   <h1>Ivan Shishkin</h1>
   <h2>Computer Science Student @ UC Irvine</h2>
@@ -78,5 +27,8 @@
       Passionate about algorithms, problem-solving, and applying technology to real-world challenges.
       Dedicated to continuous learning, disciplined work, and personal growth.
   </p>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
