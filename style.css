@@ -547,3 +547,26 @@ p {
     font-size: 0.9rem;
   }
 }
+
+/* Hidden by default --- Small screen warning */
+#small-screen-warning {
+  display: none;
+  position: fixed; inset: 0;
+  align-items: center; justify-content: center;
+  padding: 2rem; text-align: center;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.75);
+  color: #fff; z-index: 9999;
+}
+
+/* Block the site on small viewports or narrow portrait */
+@media (max-width: 900px), (max-height: 500px), (orientation: portrait) and (max-width: 1100px) {
+  #app { display: none; }
+  #small-screen-warning { display: flex; }
+}
+
+/* Optional: only target touch devices */
+@media (pointer: coarse) and (max-width: 1100px) {
+  #app { display: none; }
+  #small-screen-warning { display: flex; }
+}
