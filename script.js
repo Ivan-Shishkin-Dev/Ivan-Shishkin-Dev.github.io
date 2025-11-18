@@ -45,3 +45,20 @@ buttons.forEach(btn => {
 setActiveButton('home'); // highlight
 // If you want to force content to 'home' on first load, uncomment:
 // swapContent('home');
+
+// Hamburger menu toggle for small screens
+const navBar = document.querySelector('.nav-bar');
+const navToggle = document.querySelector('.nav-toggle');
+
+if (navBar && navToggle) {
+  navToggle.addEventListener('click', () => {
+    navBar.classList.toggle('open');
+  });
+}
+
+// Close menu when clicking any nav button (mobile)
+document.querySelectorAll('.button-container button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    navBar.classList.remove('open'); // hides dropdown
+  });
+});

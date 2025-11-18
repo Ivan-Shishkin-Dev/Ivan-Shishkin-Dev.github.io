@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ivan Shishkin's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Small screen warning overlay -->
+  <!-- Small screen warning overlay
   <div id="small-screen-warning" role="dialog" aria-live="polite" aria-modal="true">
     <div>
       <h2>Please use a larger screen</h2>
       <p>Open this site on a laptop/desktop (or rotate to landscape on a tablet).</p>
     </div>
-  </div>
+  </div> -->
 
   <!-- Everything below is your site content -->
   <div id="app">
@@ -22,16 +23,25 @@
       <source src="photo_video/city_landscape.mp4" type="video/mp4" />
     </video>
 
-    <!-- Left sidebar buttons (tabs) -->
-    <div class="button-container">
-      <button data-panel="home">Home</button>
-      <button data-panel="about">About</button>
-      <button data-panel="education">Education</button>
-      <button data-panel="experience">Experience</button>
-      <button data-panel="projects">Projects</button>
-      <button data-panel="skills">Skills</button>
-      <button data-panel="contact">Contact</button>
+    <div class="nav-bar">
+      <!-- Hamburger button (shown on small screens only) -->
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <!-- Actual menu buttons -->
+      <div class="button-container">
+        <button data-panel="home">Home</button>
+        <button data-panel="about">About</button>
+        <button data-panel="education">Education</button>
+        <button data-panel="experience">Experience</button>
+        <button data-panel="projects">Projects</button>
+        <button data-panel="skills">Skills</button>
+        <button data-panel="contact">Contact</button>
+      </div>
     </div>
+
+
 
     <!-- Center content -->
     <div class="main-content">

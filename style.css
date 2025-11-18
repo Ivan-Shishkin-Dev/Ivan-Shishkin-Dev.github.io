@@ -8,8 +8,7 @@ body {
   align-items: center;
   color: white;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
+  font-family: 'Inter', sans-serif;
 }
 
 video {
@@ -28,11 +27,6 @@ body::before {
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
-}
-
-h1, h2, p {
-  position: relative;
-  z-index: 2;
 }
 
 h1 {
@@ -56,38 +50,153 @@ p {
   padding: 0 20px;
 }
 
-/* Vertical sidebar button container */
-.button-container {
-  position: fixed;          /* keeps it in place */
-  top: 50%;                 /* center vertically */
-  left: 40px;               /* distance from the left edge */
-  transform: translateY(-50%);
+/* ----------------------------------------Button container---------------------------------------- */
+
+
+/* Frosted Glass Navigation Bar */
+.nav-bar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 14px;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
   display: flex;
-  flex-direction: column;   /* stack buttons vertically */
-  gap: 2rem;                /* space between buttons */
-  z-index: 3;               /* above the overlay */
+  align-items: center;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Sidebar buttons */
+
+/* Horizontal buttons (desktop) */
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+
+/* Text-only buttons */
 .button-container button {
-  background: rgba(255, 255, 255, 0.15);
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+
   color: white;
-  border: 2px solid white;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+
   cursor: pointer;
-  transition: 0.3s;
-  text-align: left;          /* aligns text left */
-  width: 140px;              /* consistent button width */
+  padding: 4px 8px;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s ease;
+}
+
+/* Underline for active tab */
+.button-container button.active {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  background: transparent !important;
 }
 
 /* Hover effect */
 .button-container button:hover {
-  background: white;
-  color: black;
-  transform: translateX(5px); /* slide right on hover */
+  opacity: 0.65;
 }
+
+.nav-toggle {
+  display: none;
+}
+
+/* Mobile breakpoint - use hamburger and dropdown */
+@media (max-width: 800px) {
+
+  /* NAV BAR — mobile */
+  .nav-bar {
+    position: fixed;
+    top: 16px;
+    left: 0;
+    right: 0;
+    height: auto;
+
+    padding: 0 16px;       /* padding left + right */
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+
+    display: flex;
+    justify-content: flex-end;   /* ⬅ forces hamburger to the RIGHT */
+    align-items: center;
+    z-index: 10;
+  }
+
+  /* HAMBURGER BUTTON — shown on mobile */
+  .nav-toggle {
+    display: block;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 6px;
+  }
+
+  /* DROPDOWN MENU */
+  .button-container {
+    display: none;
+    position: absolute;
+    top: 60px;              /* dropdown below icon */
+    right: 16px;            /* aligns dropdown to the right */
+    left: auto;
+
+    padding: 12px 16px;
+    border-radius: 14px;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* WHEN OPEN */
+  .nav-bar.open .button-container {
+    display: flex;
+  }
+
+  /* Buttons inside dropdown */
+  .button-container button {
+    font-size: 1rem;
+    padding: 4px 6px;
+    text-align: left;
+  }
+  .nav-toggle {
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.15s ease;
+  }
+
+  .nav-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-toggle:active {
+    transform: scale(0.9);
+  }
+
+}
+
+
+/* -------------------------------------------------------------------------------- */
 
 /* Centers your main name + text */
 .main-content {
@@ -122,12 +231,6 @@ p {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Optional: active button style */
-.button-container button.active {
-  background: rgba(255,255,255,0.28);
-  transform: none;
 }
 
 /* ------------------UNDER THIS IS ABOUT CONTACT BUTTONS------------------ */
@@ -317,7 +420,6 @@ p {
   margin: 0 auto;
   max-width: 780px;           /* give the content a little more width */
   max-height: 80vh;           /* keep it contained if long */
-  overflow-y: auto;           /* scroll only this section if needed */
   padding: 8px 6px 12px 6px;  /* subtle breathing room */
 }
 
@@ -403,29 +505,6 @@ p {
   display: none;
 }
 
-/* Responsive tweaks */
-@media (max-width: 640px) {
-  .projects-section {
-    max-width: 92vw;
-    padding: 6px 2px 10px;
-  }
-  .projects-section h2 {
-    font-size: 2.2rem;
-  }
-  .project {
-    padding: 16px 14px 14px;
-    border-radius: 12px;
-  }
-  .project h3 {
-    font-size: 1.25rem;
-  }
-  .project-date {
-    font-size: 0.9rem;
-  }
-  .project p {
-    font-size: 1rem;
-  }
-}
 
 /* ------------------ EXPERIENCE SECTION ------------------ */
 .experience-section {
@@ -436,7 +515,6 @@ p {
   margin: 0 auto;
   max-width: 780px;
   max-height: 80vh;
-  overflow-y: auto;
   padding-right: 10px;
 }
 
@@ -528,45 +606,4 @@ p {
   border: none;
   border-bottom: 6px solid #F1F1F1;
   margin: 24px 0;
-}
-
-/* Responsive */
-@media (max-width: 640px) {
-  .experience-section {
-    max-width: 92vw;
-    padding: 0 4px;
-  }
-  .experience-section h2 {
-    font-size: 2.2rem;
-  }
-  .experience h3 {
-    font-size: 1.25rem;
-  }
-  .experience .organization,
-  .experience .location {
-    font-size: 0.9rem;
-  }
-}
-
-/* Hidden by default --- Small screen warning */
-#small-screen-warning {
-  display: none;
-  position: fixed; inset: 0;
-  align-items: center; justify-content: center;
-  padding: 2rem; text-align: center;
-  backdrop-filter: blur(6px);
-  background: rgba(0,0,0,0.75);
-  color: #fff; z-index: 9999;
-}
-
-/* Block the site on small viewports or narrow portrait */
-@media (max-width: 900px), (max-height: 500px), (orientation: portrait) and (max-width: 1100px) {
-  #app { display: none; }
-  #small-screen-warning { display: flex; }
-}
-
-/* Optional: only target touch devices */
-@media (pointer: coarse) and (max-width: 1100px) {
-  #app { display: none; }
-  #small-screen-warning { display: flex; }
 }
