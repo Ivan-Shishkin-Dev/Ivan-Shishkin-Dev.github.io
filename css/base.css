@@ -41,11 +41,17 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #cccccc;
-  margin-bottom: 1rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  margin-top: 10px;          /* LESS space above */
+  margin-bottom: 2.2rem;     /* MORE space below */
 }
+
+
 
 p {
   font-size: 1.25rem;
@@ -99,5 +105,179 @@ p {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* -------- Hero identity card (Home) -------- */
+
+.hero-card {
+  position: relative;
+  z-index: 3;
+  margin: 0 auto;
+  max-width: 520px;
+
+  padding: 28px 32px 26px;
+  border-radius: 18px;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+
+  text-align: center;
+}
+
+/* Avatar circle with initials */
+.hero-avatar {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 14px;
+
+  border-radius: 50%;
+  overflow: hidden;             /* REQUIRED to crop image into a circle */
+  border: 2px solid rgba(255, 255, 255, 0.7);
+
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: none;             /* remove gradient background */
+}
+
+/* Make the image fill the circle */
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;            /* crops image cleanly */
+}
+
+
+/* Name and text */
+.hero-name {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 4px 0 4px;
+}
+
+.hero-tagline {
+  font-size: 1.15rem;
+  color: #d0d0d0;
+  margin: 0 0 6px;
+}
+
+.hero-subtagline {
+  font-size: 0.98rem;
+  color: #e0e0e0;
+  max-width: 420px;
+  margin: 0 auto 18px;
+  line-height: 1.6;
+}
+
+/* Links row */
+.hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.hero-link {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  transition: background 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease,
+    color 0.18s ease;
+}
+
+.hero-link:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+}
+
+.hero-link:active {
+  transform: translateY(0);
+}
+
+/* Mobile tweaks */
+@media (max-width: 800px) {
+  .hero-card {
+    max-width: 90vw;
+    padding: 22px 20px 20px;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+  }
+
+  .hero-subtagline {
+    font-size: 0.95rem;
+  }
+
+  .hero-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero-link {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+/* Desktop enhancement */
+@media (min-width: 1100px) {
+  .hero-card {
+    max-width: 640px; /* bigger card */
+    padding: 38px 48px 36px; /* more breathing room */
+    border-radius: 20px; /* slightly more premium */
+    transform: scale(1.08); /* subtle enlargement */
+  }
+
+  .hero-avatar {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 20px;
+  }
+
+  .hero-initials {
+    font-size: 2.7rem;
+  }
+
+  .hero-name {
+    font-size: 3rem; /* stronger headline */
+  }
+
+  .hero-tagline {
+    font-size: 1.35rem;
+  }
+
+  .hero-subtagline {
+    font-size: 1.15rem;
+    max-width: 520px;
+  }
+
+  .hero-links {
+    gap: 18px;
+  }
+
+  .hero-link {
+    font-size: 1.05rem;
+    padding: 9px 18px;
   }
 }

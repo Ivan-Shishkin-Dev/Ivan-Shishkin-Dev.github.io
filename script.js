@@ -44,9 +44,7 @@ buttons.forEach((btn) => {
 });
 
 // Default panel on load
-setActiveButton("home"); // highlight
-// If you want to force content to 'home' on first load, uncomment:
-// swapContent('home');
+swapContent('home');
 
 // Hamburger menu toggle for small screens
 const navBar = document.querySelector(".nav-bar");

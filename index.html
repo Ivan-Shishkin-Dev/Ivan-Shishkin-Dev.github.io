@@ -35,60 +35,88 @@
           <button data-panel="experience">Experience</button>
           <button data-panel="projects">Projects</button>
           <button data-panel="skills">Skills</button>
-          <button data-panel="contact">Contact</button>
         </div>
       </div>
 
       <!-- Center content -->
       <div class="main-content">
         <!-- Swappable panel content -->
-        <div id="content">
-          <h1>Ivan Shishkin</h1>
-          <h2>Computer Science Student @ UC Irvine</h2>
-          <p>
-            Aspiring computer scientist focused on building efficient and
-            impactful systems. Passionate about algorithms, problem-solving, and
-            applying technology to real-world challenges. Dedicated to
-            continuous learning, disciplined work, and personal growth.
-          </p>
-        </div>
+        <div id="content"></div>
       </div>
 
       <!-- Hidden templates for each panel -->
       <template id="tpl-home" class="panel">
-        <h1>Ivan Shishkin</h1>
-        <h2>Computer Science Student @ UC Irvine</h2>
-        <p>
-          Aspiring computer scientist focused on building efficient and
-          impactful systems. Passionate about algorithms, problem-solving, and
-          applying technology to real-world challenges. Dedicated to continuous
-          learning, disciplined work, and personal growth.
-        </p>
+        <div class="hero-card">
+          <div class="hero-avatar">
+            <img src="photo_video/Headshot.JPG" alt="Ivan Shishkin Headshot" />
+          </div>
+
+          <h1 class="hero-name">Ivan Shishkin</h1>
+          <p class="hero-tagline">Computer Science @ UC Irvine</p>
+          <p class="hero-subtagline">
+            Building efficient systems with clean code, disciplined execution,
+            and clear thinking.
+          </p>
+
+          <div class="hero-links">
+            <a
+              href="https://github.com/Ivan-Shishkin-Dev"
+              target="_blank"
+              class="hero-link"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ivan-shishkin-dev"
+              target="_blank"
+              class="hero-link"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=shishkinivan2006@gmail.com"
+              target="_blank"
+              class="hero-link"
+            >
+              Email
+            </a>
+          </div>
+        </div>
       </template>
 
       <!--------------- EVERYTHING UNDER THIS IS ABOUT ME -------------->
 
       <template id="tpl-about" class="panel">
-        <section class="about-section">
+        <section class="about-section about-pillars">
           <h2>About Me</h2>
-          <hr class="divider" />
-          <p>
-            I’m <strong>Ivan Shishkin</strong>, a Computer Science student at
-            the <strong>University of California, Irvine</strong>. I’m
-            passionate about creating efficient and impactful systems through
-            clean code, strong logic, and design thinking.
-          </p>
-          <p>
-            My interests span <strong>software engineering</strong>,
-            <strong>artificial intelligence</strong>, and
-            <strong>systems design</strong>. I bring high-level problem-solving
-            while building projects that combine theory and practice.
-          </p>
-          <p>
-            Outside of programming, I’m dedicated to fitness, leadership, and
-            continuous personal development. I believe in disciplined
-            improvement and pushing myself in every area of life.
-          </p>
+
+          <div class="about-pillar">
+            <span class="about-label">Who I Am</span>
+            <p>
+              I’m Ivan Shishkin, a Computer Science student at UCI focused on
+              building systems that are reliable, understandable, and grounded
+              in clean fundamentals. What drives me is clarity and intention.
+            </p>
+          </div>
+
+          <div class="about-pillar">
+            <span class="about-label">Where I Come From</span>
+            <p>
+              I didn’t grow up with much, so discipline and persistence aren’t
+              optional for me. They shaped how I approach work: break
+              problems down, understand the core idea, and build solutions that
+              hold up under pressure.
+            </p>
+          </div>
+
+          <div class="about-pillar">
+            <span class="about-label">How I Work</span>
+            <p>
+              I value clean architecture, clear reasoning, and deliberate
+              execution. My interests lean toward systems and back-end
+              engineering. As my expertise grows, I’m excited to explore more.
+            </p>
+          </div>
         </section>
       </template>
 
@@ -269,41 +297,6 @@
             </div>
           </div>
         </section>
-      </template>
-
-      <!--------------- EVERYTHING UNDER THIS IS ABOUT CONTACTS -------------->
-      <template id="tpl-contact" class="panel">
-        <div class="contact-buttons">
-          <a
-            href="https://www.linkedin.com/in/ivan-shishkin-dev"
-            target="_blank"
-            class="btn linkedin"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-              alt="LinkedIn"
-            />
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/Ivan-Shishkin-Dev"
-            target="_blank"
-            class="btn github"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"
-              alt="GitHub"
-            />
-            GitHub
-          </a>
-          <a href="mailto:shishkinivan2006@gmail.com" class="btn email">
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg"
-              alt="Email"
-            />
-            Email
-          </a>
-        </div>
       </template>
     </div>
     <!-- end #app -->
