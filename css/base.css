@@ -25,14 +25,16 @@ video {
 
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  pointer-events: none; /* important, so it does not block clicks */
 }
+
 
 h1 {
   font-size: 5rem;
@@ -47,11 +49,9 @@ h2 {
   text-align: center;
   letter-spacing: 0.04em;
 
-  margin-top: 10px;          /* LESS space above */
-  margin-bottom: 2.2rem;     /* MORE space below */
+  margin-top: 10px; /* LESS space above */
+  margin-bottom: 2.2rem; /* MORE space below */
 }
-
-
 
 p {
   font-size: 1.25rem;
@@ -135,7 +135,7 @@ p {
   margin: 0 auto 14px;
 
   border-radius: 50%;
-  overflow: hidden;             /* REQUIRED to crop image into a circle */
+  overflow: hidden; /* REQUIRED to crop image into a circle */
   border: 2px solid rgba(255, 255, 255, 0.7);
 
   box-shadow: 0 8px 26px rgba(0, 0, 0, 0.8);
@@ -144,16 +144,15 @@ p {
   align-items: center;
   justify-content: center;
 
-  background: none;             /* remove gradient background */
+  background: none; /* remove gradient background */
 }
 
 /* Make the image fill the circle */
 .hero-avatar img {
   width: 100%;
   height: 100%;
-  object-fit: cover;            /* crops image cleanly */
+  object-fit: cover; /* crops image cleanly */
 }
-
 
 /* Name and text */
 .hero-name {
@@ -281,3 +280,32 @@ p {
     padding: 9px 18px;
   }
 }
+
+/* Handle very short window heights */
+@media (max-height: 700px) {
+  body {
+    height: auto;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .main-content {
+    margin-top: 40px;
+  }
+
+  .hero-card {
+    transform: none;
+    margin-top: 40px;
+  }
+
+  .education-section,
+  .experience-section,
+  .projects-section {
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
