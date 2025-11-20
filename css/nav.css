@@ -1,0 +1,148 @@
+/* -------- Navigation bar + hamburger -------- */
+
+/* Frosted Glass Navigation Bar (desktop) */
+.nav-bar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 14px;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Horizontal buttons (desktop) */
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Text-only buttons */
+.button-container button {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  padding: 4px 8px;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s ease;
+}
+
+/* Underline for active tab */
+.button-container button.active {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  background: transparent !important;
+}
+
+/* Hover effect */
+.button-container button:hover {
+  opacity: 0.65;
+}
+
+/* Hidden by default on desktop */
+.nav-toggle {
+  display: none;
+}
+
+/* -------- Mobile breakpoint - hamburger + dropdown -------- */
+@media (max-width: 800px) {
+  /* NAV BAR — mobile */
+  .nav-bar {
+    position: fixed;
+    top: 16px;
+    left: 0;
+    right: 0;
+    height: auto;
+
+    padding: 0 16px;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+
+    display: flex;
+    justify-content: flex-end; /* hamburger to the RIGHT */
+    align-items: center;
+    z-index: 10;
+  }
+
+  /* HAMBURGER BUTTON — shown on mobile */
+  .nav-toggle {
+    display: block;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 8px;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+
+  .nav-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .nav-toggle:active {
+    transform: scale(0.9);
+  }
+
+  /* DROPDOWN MENU - base closed state */
+  .button-container {
+    position: absolute;
+    top: 60px; /* just below the icon */
+    right: 16px;
+    left: auto;
+
+    padding: 12px 16px;
+    border-radius: 14px;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    flex-direction: column;
+    gap: 0.75rem;
+
+    /* animation setup */
+    opacity: 0;
+    transform: translateY(-6px);
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.18s ease-out, transform 0.18s ease-out,
+      max-height 0.22s ease-out;
+  }
+
+  /* WHEN OPEN - fade and slide down */
+  .nav-bar.open .button-container {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 400px; /* big enough for all items */
+    pointer-events: auto;
+  }
+
+  /* Buttons inside dropdown */
+  .button-container button {
+    font-size: 1rem;
+    padding: 4px 6px;
+    text-align: left;
+  }
+}
