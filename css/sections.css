@@ -206,25 +206,40 @@
   margin: 4px 0 0 0;
 }
 
-.project ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 8px 0 0 0;
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 6px 0 10px;
 }
 
-.project li {
-  margin: 8px 0;
-  color: #f5f5f5;
-  padding-left: 16px;
-  position: relative;
-}
-
-.project li::before {
-  content: "•";
+.badge {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: #ffffff;
-  position: absolute;
-  left: 0;
-  top: 0;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+}
+
+.project-links {
+  margin-top: 10px;
+}
+
+.project-links a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  padding-bottom: 1px;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.project-links a:hover {
+  opacity: 0.75;
+  border-color: #ffffff;
 }
 
 /* -------- Experience section -------- */
@@ -338,7 +353,7 @@
 /* label line: WHO I AM / WHERE I COME FROM / HOW I WORK */
 .about-label {
   display: block;
-  font-size: 1.05rem;            /* bigger */
+  font-size: 1.05rem; /* bigger */
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.22em;
