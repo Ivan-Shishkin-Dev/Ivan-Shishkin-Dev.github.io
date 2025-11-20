@@ -44,7 +44,7 @@ buttons.forEach((btn) => {
 });
 
 // Default panel on load
-swapContent('home');
+swapContent("home");
 
 // Hamburger menu toggle for small screens
 const navBar = document.querySelector(".nav-bar");

@@ -140,6 +140,97 @@
   line-height: 1.6;
 }
 
+/* Orb cloud layout */
+.skill-orb-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 6px 20px 6px;
+}
+
+/* Orb base style */
+.skill-orb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  padding: 16px 20px;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.45), rgba(255,255,255,0.08));
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.45),
+    0 10px 24px rgba(0,0,0,0.65);
+  color: #ffffff;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  cursor: default;
+
+  animation: orbFloat 4.5s ease-in-out infinite;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.skill-orb span {
+  white-space: nowrap;
+}
+
+/* Different sizes for hierarchy */
+.skill-orb.size-lg {
+  padding: 22px 30px;
+  font-size: 1.05rem;
+}
+
+.skill-orb.size-md {
+  padding: 18px 24px;
+}
+
+.skill-orb.size-sm {
+  padding: 12px 18px;
+  font-size: 0.9rem;
+}
+
+/* Hover effect */
+.skill-orb:hover {
+  transform: translateY(-6px) scale(1.06);
+  box-shadow:
+    0 0 18px rgba(255,255,255,0.7),
+    0 14px 28px rgba(0,0,0,0.8);
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.9), rgba(255,255,255,0.18));
+}
+
+/* Floating animation */
+@keyframes orbFloat {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Slight variation on animation timing per orb */
+.skill-orb:nth-child(2) { animation-duration: 5.2s; animation-delay: 0.1s; }
+.skill-orb:nth-child(3) { animation-duration: 4.2s; animation-delay: 0.2s; }
+.skill-orb:nth-child(4) { animation-duration: 5.0s; animation-delay: 0.3s; }
+.skill-orb:nth-child(5) { animation-duration: 4.6s; animation-delay: 0.15s; }
+.skill-orb:nth-child(6) { animation-duration: 5.4s; animation-delay: 0.25s; }
+
+/* Mobile tweaks */
+@media (max-width: 700px) {
+  .skill-orb-cloud {
+    gap: 12px;
+  }
+  .skill-orb {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+  .skill-orb.size-lg {
+    padding: 16px 22px;
+    font-size: 0.98rem;
+  }
+}
+
 /* -------- Projects section -------- */
 
 .projects-section {
