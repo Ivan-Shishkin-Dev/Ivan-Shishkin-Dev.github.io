@@ -35,7 +35,6 @@ body::before {
   pointer-events: none; /* important, so it does not block clicks */
 }
 
-
 h1 {
   font-size: 5rem;
   font-weight: 800;
@@ -308,4 +307,3 @@ p {
     overflow-y: visible;
   }
 }
-
