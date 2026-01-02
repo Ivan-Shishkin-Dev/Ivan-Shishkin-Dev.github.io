@@ -1,10 +1,12 @@
 import "./App.css";
+import { useState, useEffect } from "react";
 import headshot from "./assets/Ivan Shishkin Headshot.JPG";
 import BlurText from "./components/BlurText";
 import ShinyText from "./components/ShinyText";
 import SpotlightCard from "./components/SpotlightCard";
 import GlassIcons from "./components/GlassIcons";
 import StaggeredMenu from "./components/StaggeredMenu";
+import PillNav from "./components/PillNav";
 import Section from "./components/Section";
 import LogoLoop from "./components/LogoLoop";
 // Skill icons
@@ -89,8 +91,64 @@ const socialMenuItems = [
 ];
 
 function App() {
+  const [activeSection, setActiveSection] = useState("#home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = menuItems.map((item) =>
+        document.querySelector(item.link)
+      );
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(menuItems[i].link);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Convert menuItems to PillNav format (with href instead of link)
+  const pillNavItems = menuItems.map((item) => ({
+    label: item.label,
+    href: item.link,
+    ariaLabel: item.ariaLabel,
+  }));
+
   return (
     <div className="App">
+      {/* PillNav - Menu bar */}
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1001,
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "1em",
+          pointerEvents: "none",
+        }}
+      >
+        <div style={{ pointerEvents: "all" }}>
+          <PillNav
+            items={pillNavItems}
+            activeHref={activeSection}
+            className="custom-nav"
+            baseColor="#fff"
+            pillColor="#060010"
+            hoveredPillTextColor="#060010"
+          />
+        </div>
+      </div>
+
       <div
         style={{
           position: "fixed",
