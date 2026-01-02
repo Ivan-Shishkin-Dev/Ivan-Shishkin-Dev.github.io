@@ -9,7 +9,7 @@ import StaggeredMenu from "./components/StaggeredMenu";
 import PillNav from "./components/PillNav";
 import Section from "./components/Section";
 import LogoLoop from "./components/LogoLoop";
-import Aurora from "./components/Aurora";
+import LetterGlitch from "./components/LetterGlitch";
 // Skill icons
 import {
   ReactIcon,
@@ -182,11 +182,11 @@ function App() {
       <Section
         id="home"
         background={
-          <Aurora
-            colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-            blend={0.5}
-            amplitude={1.0}
-            speed={0.5}
+          <LetterGlitch
+            glitchSpeed={50}
+            centerVignette={true}
+            outerVignette={false}
+            smooth={true}
           />
         }
         style={{ background: "#000000" }}
@@ -197,7 +197,23 @@ function App() {
               <img src={headshot} alt="Ivan Shishkin" className="headshot" />
             </SpotlightCard>
           </div>
-          <div className="intro-text">
+          <div
+            className="intro-text"
+            style={{
+              backgroundColor: "rgba(0, 0, 0, 0.4)",
+              backdropFilter: "blur(10px)",
+              WebkitBackdropFilter: "blur(10px)",
+              padding: "1.5rem",
+              paddingBottom: "2.5rem",
+              borderRadius: "8px",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              overflow: "visible",
+            }}
+          >
             <BlurText
               text="Hi, I'm Ivan Shishkin"
               className="greeting"
@@ -215,7 +231,12 @@ function App() {
             width: "100%",
             maxWidth: "900px",
             margin: "3rem auto 0",
-            padding: "2rem 0",
+            padding: "2rem",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)",
+            borderRadius: "8px",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
           }}
         >
           <LogoLoop

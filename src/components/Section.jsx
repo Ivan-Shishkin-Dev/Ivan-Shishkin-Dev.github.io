@@ -11,6 +11,7 @@ const Section = ({ id, children, background = null, style = {} }) => {
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
+        isolation: 'isolate',
         ...style
       }}
     >
@@ -22,7 +23,10 @@ const Section = ({ id, children, background = null, style = {} }) => {
           left: 0,
           right: 0,
           bottom: 0,
-          zIndex: 0
+          width: '100%',
+          height: '100%',
+          zIndex: 0,
+          overflow: 'hidden'
         }}>
           {background}
         </div>
