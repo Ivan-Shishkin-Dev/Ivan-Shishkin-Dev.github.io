@@ -57,13 +57,59 @@ const GitIcon = () => (
   </svg>
 );
 
+const ViteIcon = () => (
+  <svg viewBox="0 0 24 24" fill="#646CFF" width="28" height="28">
+    <path d="M12.089 0L.525 23.977h4.942l1.97-4.1 4.1 4.1h6.028l-7.14-14.85L12.089 0zm.525 4.1l5.862 12.176-2.351-2.351L12.614 4.1z" />
+  </svg>
+);
+
+const SupabaseIcon = () => (
+  <svg viewBox="0 0 24 24" fill="#3ECF8E" width="28" height="28">
+    <path d="M21.362 9.354H12V.396a.396.396 0 0 0-.716-.233L2.203 12.424l-.401.562a1.04 1.04 0 0 0 .836 1.659H12v8.959a.396.396 0 0 0 .716.233l9.081-12.261.401-.562a1.04 1.04 0 0 0-.836-1.66z" />
+  </svg>
+);
+
+const CPlusPlusIcon = () => (
+  <svg viewBox="0 0 24 24" fill="#00599C" width="28" height="28">
+    <path d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.508-.293-1.185-.293-1.694 0L2.922 5.31c-.508.293-.922 1.013-.922 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.185.293 1.694 0l8.816-5.09c.508-.293.922-1.013.922-1.6V6.91c.023-.31-.063-.546-.229-.836zm-6.73 10.12h-1.17v1.17h-.94v-1.17h-1.17v-.94h1.17v-1.17h.94v1.17h1.17zm3.15 0h-1.17v1.17h-.94v-1.17h-1.17v-.94h1.17v-1.17h.94v1.17h1.17zM6.774 7.41l5.64 3.26 5.64-3.26v6.52l-5.64 3.26-5.64-3.26z" />
+  </svg>
+);
+
+const JavaScriptIcon = () => (
+  <svg viewBox="0 0 24 24" fill="#F7DF1E" width="28" height="28">
+    <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.103-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.12c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.511-.693 1.811-1.411.51-1.161.435-2.28.435-3.927.012-2.054 0-4.109 0-6.179l.004-.056z" />
+  </svg>
+);
+
+const HTMLIcon = () => (
+  <svg viewBox="0 0 24 24" fill="#E34F26" width="28" height="28">
+    <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622h10.125l-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.955-.81-.188-2.11H6.64l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" />
+  </svg>
+);
+
+const CSSIcon = () => (
+  <svg viewBox="0 0 24 24" fill="#1572B6" width="28" height="28">
+    <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622h10.125l-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.955-.81-.188-2.11H6.64l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" />
+  </svg>
+);
+
+const SQLIcon = () => (
+  <svg viewBox="0 0 24 24" fill="#336791" width="28" height="28">
+    <path d="M23.154 2.104L20.842 0 12.5 6.77 4.158 0 1.846 2.104 12.5 12.5 23.154 2.104zM1.846 21.896L4.158 24l8.342-6.77L20.842 24l2.312-2.104L12.5 11.5 1.846 21.896z" />
+  </svg>
+);
+
 const skills = [
   { node: <ReactIcon />, title: "React", ariaLabel: "React" },
   { node: <NodeIcon />, title: "Node.js", ariaLabel: "Node.js" },
   { node: <PythonIcon />, title: "Python", ariaLabel: "Python" },
-  { node: <PostgresIcon />, title: "PostgreSQL", ariaLabel: "PostgreSQL" },
-  { node: <MongoIcon />, title: "MongoDB", ariaLabel: "MongoDB" },
-  { node: <AWSIcon />, title: "AWS", ariaLabel: "AWS" },
+  { node: <JavaScriptIcon />, title: "JavaScript", ariaLabel: "JavaScript" },
+  { node: <HTMLIcon />, title: "HTML", ariaLabel: "HTML" },
+  { node: <CSSIcon />, title: "CSS", ariaLabel: "CSS" },
+  { node: <ViteIcon />, title: "Vite", ariaLabel: "Vite" },
+  { node: <SupabaseIcon />, title: "Supabase", ariaLabel: "Supabase" },
+  { node: <CPlusPlusIcon />, title: "C++", ariaLabel: "C++" },
+  { node: <SQLIcon />, title: "SQL", ariaLabel: "SQL" },
   { node: <DockerIcon />, title: "Docker", ariaLabel: "Docker" },
   { node: <GitIcon />, title: "Git", ariaLabel: "Git" },
 ];
@@ -152,6 +198,28 @@ function App() {
             fadeOutColor="#000000"
             scaleOnHover={true}
             ariaLabel="Technology skills"
+            renderItem={(item) => (
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                <span className="logoloop__node">{item.node}</span>
+                <span
+                  style={{
+                    color: "#fff",
+                    fontSize: "1rem",
+                    fontWeight: 500,
+                    opacity: 0.9,
+                  }}
+                >
+                  {item.title}
+                </span>
+              </div>
+            )}
           />
         </div>
       </Section>
@@ -165,6 +233,122 @@ function App() {
             experience in building modern web applications. I love creating
             clean, efficient code and solving complex problems.
           </p>
+        </div>
+      </Section>
+
+      {/* Experience Section */}
+      <Section id="experience" style={{ background: "#050508" }}>
+        <div className="section-content">
+          <h2 className="section-title">Experience</h2>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "2rem",
+              maxWidth: "800px",
+              margin: "0 auto",
+            }}
+          >
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.03)",
+                padding: "2rem",
+                borderRadius: "12px",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+              }}
+            >
+              <h3
+                style={{
+                  color: "#fff",
+                  fontSize: "1.5rem",
+                  marginBottom: "0.5rem",
+                  fontWeight: 600,
+                }}
+              >
+                Position Title
+              </h3>
+              <p
+                style={{
+                  color: "#aaa",
+                  fontSize: "1rem",
+                  marginBottom: "1rem",
+                  fontStyle: "italic",
+                }}
+              >
+                Company Name • Location • Date Range
+              </p>
+              <ul
+                style={{
+                  color: "#ccc",
+                  fontSize: "1rem",
+                  lineHeight: "1.8",
+                  paddingLeft: "1.5rem",
+                }}
+              >
+                <li>Key achievement or responsibility</li>
+                <li>Another important contribution</li>
+                <li>Notable project or impact</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Education Section */}
+      <Section id="education" style={{ background: "#0d0d0d" }}>
+        <div className="section-content">
+          <h2 className="section-title">Education</h2>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "2rem",
+              maxWidth: "800px",
+              margin: "0 auto",
+            }}
+          >
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.03)",
+                padding: "2rem",
+                borderRadius: "12px",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+              }}
+            >
+              <h3
+                style={{
+                  color: "#fff",
+                  fontSize: "1.5rem",
+                  marginBottom: "0.5rem",
+                  fontWeight: 600,
+                }}
+              >
+                Degree Name
+              </h3>
+              <p
+                style={{
+                  color: "#aaa",
+                  fontSize: "1rem",
+                  marginBottom: "0.5rem",
+                  fontStyle: "italic",
+                }}
+              >
+                University Name • Location
+              </p>
+              <p
+                style={{
+                  color: "#888",
+                  fontSize: "0.9rem",
+                  marginBottom: "1rem",
+                }}
+              >
+                Date Range • GPA (if applicable)
+              </p>
+              <p style={{ color: "#ccc", fontSize: "1rem", lineHeight: "1.8" }}>
+                Relevant coursework, honors, or achievements.
+              </p>
+            </div>
+          </div>
         </div>
       </Section>
 
