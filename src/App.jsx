@@ -81,7 +81,6 @@ const menuItems = [
   },
   { label: "Projects", ariaLabel: "Go to projects section", link: "#projects" },
   { label: "Skills", ariaLabel: "Go to skills section", link: "#skills" },
-  { label: "Contact", ariaLabel: "Go to contact section", link: "#contact" },
 ];
 
 const socialMenuItems = [
@@ -389,25 +388,6 @@ function App() {
           <p className="section-text">
             Coming soon - technical skills and technologies I work with.
           </p>
-        </div>
-      </Section>
-
-      {/* Contact Section */}
-      <Section id="contact" style={{ background: "#080808" }}>
-        <div className="section-content">
-          <h2 className="section-title">Contact</h2>
-          <p className="section-text">
-            Get in touch! Feel free to reach out through any of my social links.
-          </p>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginTop: "2rem",
-            }}
-          >
-            <GlassIcons items={socialLinks} />
-          </div>
         </div>
       </Section>
     </div>
