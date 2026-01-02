@@ -9,6 +9,7 @@ import StaggeredMenu from "./components/StaggeredMenu";
 import PillNav from "./components/PillNav";
 import Section from "./components/Section";
 import LogoLoop from "./components/LogoLoop";
+import Aurora from "./components/Aurora";
 // Skill icons
 import {
   ReactIcon,
@@ -178,7 +179,18 @@ function App() {
       </div>
 
       {/* Home Section */}
-      <Section id="home" style={{ background: "#000000" }}>
+      <Section
+        id="home"
+        background={
+          <Aurora
+            colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+            blend={0.5}
+            amplitude={1.0}
+            speed={0.5}
+          />
+        }
+        style={{ background: "#000000" }}
+      >
         <div className="intro">
           <div className="headshot-wrapper">
             <SpotlightCard spotlightColor="rgba(255, 255, 255, 0.3)">
