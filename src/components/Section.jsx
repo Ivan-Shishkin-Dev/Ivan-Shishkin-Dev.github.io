@@ -1,4 +1,6 @@
-const Section = ({ id, children, background = null, style = {} }) => {
+const Section = ({ id, children, background = null, style = {}, contentPosition = 'center' }) => {
+  const isTop = contentPosition === 'top';
+
   return (
     <section
       id={id}
@@ -9,7 +11,7 @@ const Section = ({ id, children, background = null, style = {} }) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: isTop ? 'flex-start' : 'center',
         overflow: 'hidden',
         isolation: 'isolate',
         scrollSnapAlign: 'start',
@@ -40,7 +42,7 @@ const Section = ({ id, children, background = null, style = {} }) => {
         zIndex: 1,
         width: '100%',
         maxWidth: '1200px',
-        padding: '80px 20px'
+        padding: isTop ? '120px 40px' : '80px 20px'
       }}>
         {children}
       </div>

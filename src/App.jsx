@@ -10,6 +10,7 @@ import PillNav from "./components/PillNav";
 import Section from "./components/Section";
 import LogoLoop from "./components/LogoLoop";
 import LetterGlitch from "./components/LetterGlitch";
+import ScrollFloat from "./components/ScrollFloat";
 // Skill icons
 import {
   ReactIcon,
@@ -277,9 +278,9 @@ function App() {
       </Section>
 
       {/* About Section */}
-      <Section id="about" style={{ background: "#0a0a0a" }}>
+      <Section id="about" style={{ background: "#0a0a0a" }} contentPosition="top">
         <div className="section-content">
-          <h2 className="section-title">About Me</h2>
+          <ScrollFloat stagger={0.04}>About Me</ScrollFloat>
           <p className="section-text">
             Welcome to my portfolio! I'm a passionate software engineer with
             experience in building modern web applications. I love creating
@@ -289,9 +290,9 @@ function App() {
       </Section>
 
       {/* Experience Section */}
-      <Section id="experience" style={{ background: "#050508" }}>
+      <Section id="experience" style={{ background: "#050508" }} contentPosition="top">
         <div className="section-content">
-          <h2 className="section-title">Experience</h2>
+          <ScrollFloat stagger={0.04}>Experience</ScrollFloat>
           <div
             style={{
               display: "flex",
@@ -347,9 +348,9 @@ function App() {
       </Section>
 
       {/* Education Section */}
-      <Section id="education" style={{ background: "#0d0d0d" }}>
+      <Section id="education" style={{ background: "#0d0d0d" }} contentPosition="top">
         <div className="section-content">
-          <h2 className="section-title">Education</h2>
+          <ScrollFloat stagger={0.04}>Education</ScrollFloat>
           <div
             style={{
               display: "flex",
@@ -405,9 +406,9 @@ function App() {
       </Section>
 
       {/* Projects Section */}
-      <Section id="projects" style={{ background: "#050508" }}>
+      <Section id="projects" style={{ background: "#050508" }} contentPosition="top">
         <div className="section-content">
-          <h2 className="section-title">Projects</h2>
+          <ScrollFloat stagger={0.04}>Projects</ScrollFloat>
           <p className="section-text">
             Coming soon - showcase of my latest work and projects.
           </p>
@@ -415,9 +416,9 @@ function App() {
       </Section>
 
       {/* Skills Section */}
-      <Section id="skills" style={{ background: "#0d0d0d" }}>
+      <Section id="skills" style={{ background: "#0d0d0d" }} contentPosition="top">
         <div className="section-content">
-          <h2 className="section-title">Skills</h2>
+          <ScrollFloat stagger={0.04}>Skills</ScrollFloat>
           <p className="section-text">
             Coming soon - technical skills and technologies I work with.
           </p>
