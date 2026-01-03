@@ -11,6 +11,8 @@ import Section from "./components/Section";
 import LogoLoop from "./components/LogoLoop";
 import LetterGlitch from "./components/LetterGlitch";
 import ScrollFloat from "./components/ScrollFloat";
+import Squares from "./components/Squares";
+import FadeIn from "./components/FadeIn";
 // Skill icons
 import {
   ReactIcon,
@@ -278,14 +280,93 @@ function App() {
       </Section>
 
       {/* About Section */}
-      <Section id="about" style={{ background: "#0a0a0a" }} contentPosition="top">
+      <Section
+        id="about"
+        style={{ background: "#0a0a0a" }}
+        contentPosition="top"
+        background={
+          <Squares
+            speed={0.5}
+            squareSize={40}
+            direction="diagonal"
+            borderColor="#fff"
+            hoverFillColor="#222"
+          />
+        }
+      >
         <div className="section-content">
-          <ScrollFloat stagger={0.04}>About Me</ScrollFloat>
-          <p className="section-text">
-            Welcome to my portfolio! I'm a passionate software engineer with
-            experience in building modern web applications. I love creating
-            clean, efficient code and solving complex problems.
-          </p>
+          <FadeIn
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "2rem",
+              maxWidth: "800px",
+              margin: "0 auto",
+              textAlign: "center",
+              backgroundColor: "#0a0a0a",
+              padding: "2rem",
+              borderRadius: "12px",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+            }}
+          >
+            <ScrollFloat stagger={0.04}>About Me</ScrollFloat>
+            <div>
+              <h3
+                style={{
+                  color: "#fff",
+                  fontSize: "1.3rem",
+                  marginBottom: "0.75rem",
+                  fontWeight: 600,
+                  textAlign: "center",
+                }}
+              >
+                Who I Am
+              </h3>
+              <p className="section-text">
+                I'm Ivan Shishkin, a Computer Science student at UCI focused on
+                building systems that are reliable, understandable, and grounded
+                in clean fundamentals. Currently, I specialize in full-stack
+                application development. What drives me is clarity and intention.
+              </p>
+            </div>
+            <div>
+              <h3
+                style={{
+                  color: "#fff",
+                  fontSize: "1.3rem",
+                  marginBottom: "0.75rem",
+                  fontWeight: 600,
+                  textAlign: "center",
+                }}
+              >
+                Where I Come From
+              </h3>
+              <p className="section-text">
+                I didn't grow up with much, so discipline and persistence aren't
+                optional for me. They shaped how I approach work: break problems
+                down, understand the core idea, and build solutions that hold up
+                under pressure.
+              </p>
+            </div>
+            <div>
+              <h3
+                style={{
+                  color: "#fff",
+                  fontSize: "1.3rem",
+                  marginBottom: "0.75rem",
+                  fontWeight: 600,
+                  textAlign: "center",
+                }}
+              >
+                How I Work
+              </h3>
+              <p className="section-text">
+                I value clean architecture, clear reasoning, and deliberate
+                execution. My interests lean toward systems and back-end
+                engineering. As my expertise grows, I'm excited to explore more.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </Section>
 
