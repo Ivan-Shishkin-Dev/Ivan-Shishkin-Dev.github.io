@@ -3,9 +3,7 @@
 }
 
 /* Smooth scrolling for the entire page */
-html {
-  scroll-behavior: smooth;
-}
+/* Note: scroll-snap-type is now in index.css */
 
 .intro {
   display: flex;

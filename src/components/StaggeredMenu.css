@@ -52,13 +52,23 @@
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  background: transparent;
-  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
   cursor: pointer;
   color: #e9e9ef;
   font-weight: 500;
   line-height: 1;
   overflow: visible;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.sm-toggle:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .sm-toggle:focus-visible {

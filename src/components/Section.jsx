@@ -12,6 +12,8 @@ const Section = ({ id, children, background = null, style = {} }) => {
         justifyContent: 'center',
         overflow: 'hidden',
         isolation: 'isolate',
+        scrollSnapAlign: 'start',
+        scrollSnapStop: 'always',
         ...style
       }}
     >
